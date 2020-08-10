@@ -1,2 +1,3 @@
-const str = require('./01/index')
-console.log(str)
+// const str = require('./01/index')
+
+import './02/component'
