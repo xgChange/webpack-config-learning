@@ -7,8 +7,8 @@
   line-height: 100px;
 }
 
-.imgdiv{
+.imgdiv {
   height: 100px;
   width: 200px;
-  background: url(/assets/svg/webpack-logo.svg) no-repeat center;
+  background: url(../../assets/svg/webpack-logo.svg) no-repeat center;
 }
