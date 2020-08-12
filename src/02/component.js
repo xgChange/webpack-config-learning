@@ -12,10 +12,10 @@ function createDocument() {
   imgbox.src = Icon
   ele.appendChild(imgbox)
   ele.appendChild(imgdiv)
-  ele.classList.add('component');
+  ele.classList.add('component')
   return ele
 }
 
-console.log(data)
+console.log(data, 'asd')
 
 document.body.appendChild(createDocument())
