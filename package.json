@@ -22,7 +22,7 @@
     }
   },
   "lint-staged": {
-    "{src}/**/*.js": [
+    "*.js": [
       "eslint --ext .js",
       "git add ."
     ]
