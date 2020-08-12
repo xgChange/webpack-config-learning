@@ -24,6 +24,10 @@
     "{src}/**/*.js": [
       "eslint --fix",
       "git add ."
+    ],
+    "{src}/**/*.json": [
+      "eslint --fix",
+      "git add ."
     ]
   },
   "devDependencies": {
