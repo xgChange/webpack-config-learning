@@ -17,5 +17,5 @@ function createDocument() {
 }
 
 console.log(data, 'asd')
-
+asd
 document.body.appendChild(createDocument())

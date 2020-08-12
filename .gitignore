@@ -4,3 +4,6 @@ yarn.lock
 yarn-error.log
 
 dist
+
+# changelog
+CHANGELOG.md
