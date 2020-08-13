@@ -6,6 +6,7 @@ const express = require('express')
 const webpack = require('webpack')
 const Webpackconfig = require('../../webpack.config')
 const WebpackDevMiddle = require('webpack-dev-middleware')
+const path = require('path')
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use(
     publicPath: Webpackconfig.output.publicPath,
   })
 )
+app.use(express.static(path.join(__dirname, 'dist')))
 
 app.listen(3000, () => {
   console.log('server is running')

@@ -1,4 +1,5 @@
-const BASE_URL = process.env.NODE_ENV === 'development' ? '/' : '../dist/'
+const BASE_URL = process.env.NODE_ENV === 'development' ? '/' : './'
+console.log(BASE_URL)
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -12,8 +13,8 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
-    path: path.join(__dirname, 'dist'), // 以html的路径为准
-    publicPath: BASE_URL, // 对于serve环境和打包环境来说
+    path: path.join(__dirname, 'dist'),
+    publicPath: BASE_URL, // 对于serve环境和打包环境来说, 对于html模板来说的
   },
   module: {
     rules: [

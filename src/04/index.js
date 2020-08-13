@@ -11,6 +11,8 @@
  *      搞懂了 file-loader的outputPath选项是基于output选项的path
  *      搞懂了 output选项的publicPath是对于 打包时和服务器时不同的路径
  *      所以要加一层判断 是否是开发环境
+ *      搞懂了output的publicPath的意义：是外部如何去访问资源文件的路径，
+ *      它是相对于html文件的，也就是html是如何去加载资源文件.
  */
 
 import './component'
