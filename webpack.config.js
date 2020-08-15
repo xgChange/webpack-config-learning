@@ -22,6 +22,21 @@ module.exports = {
         ],
       },
       {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2, // 允许在sass中调用其他sass文件时，也继续被postcss和sass-loader解析
+              modules: true, // 开启css模块化
+            },
+          },
+          'sass-loader',
+          'postcss-loader',
+        ],
+      },
+      {
         test: /\.(png|jpg|svg|gif)$/,
         use: [
           {
