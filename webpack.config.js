@@ -32,10 +32,15 @@ module.exports = {
       },
     ],
   },
+  // plugin是可以在webpack运行到某个时刻时，帮你做一些事情
+  // 例如htmlwebpackplugin是在打包之后起作用的
+  // cleanwebpackplugin是在打包之前起作用的
   plugins: [
     new HtmlWebpackPlugin({
-      title: '管理输出',
+      template: './public/index.html', // 以public/index.html为模板生成dist下面的html。并且会自动引入bundle.js
     }),
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false, // 自动移除未被使用的资源
+    }),
   ],
 }
