@@ -10,6 +10,7 @@ function createDocument() {
   imgdiv.classList.add('imgdiv')
   const imgbox = new Image()
   imgbox.src = Icon
+  console.log(Icon) // ../dist/img/webpack-logo.523e1b9.svg 正好对应了publicPath的../dist
   ele.appendChild(imgbox)
   ele.appendChild(imgdiv)
   ele.classList.add('component')
