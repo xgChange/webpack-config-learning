@@ -3,9 +3,22 @@
 // import './02/component'
 // import './03/component'
 
+// 使用babel需要安装
+// 1. babel-loader @babel/core
+// 2. @babel/preset-env, 然后填写 "presets": ["@babel/preset-env"]
+// 3. 安装@babel/polyfill, 向下兼容一些高级语法
+// 4. 使用polyfill 按需加载 ["@babel/preset-env",{"useBuiltIns": "usage", "corejs": 3}]
+
+// import '@babel/polyfill'
+
 import createBtn from './04/index'
 
 createBtn()
+new Promise((resolve, reject) => {
+  resolve(2)
+}).then((res) => {
+  console.log(res)
+})
 
 // 监听热更新变化 （如果js变化了，就要写这一部分的逻辑代码）
 // 如果css变化了，本来也要写的，但是是由于css-loader里面已经做了处理
