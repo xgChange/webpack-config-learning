@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /node_modules/, // 语法解析的时候忽视node_modules里面的代码
         loader: 'babel-loader',
       },
     ],
