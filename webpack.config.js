@@ -10,7 +10,8 @@ module.exports = {
     main: './src/index.js',
     print: './src/03/print.js',
   },
-  // inline是将打包后的映射关系文件以base64形式写到了js文件，cheap是不精确到哪个字符(提高性能)。
+  // inline是将打包后的映射关系文件以base64形式写到了js文件，cheap是不精确到哪个字符(提高性能, 只带行信息),
+  // module是对loader里面的代码也生成sourcemap, eval是执行方式
   // 在开发环境推荐使用: cheap-module-eval-source-map，生产环境配置: cheap-module-source-map
   devtool: 'inline-source-map',
   output: {
