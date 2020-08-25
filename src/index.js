@@ -9,6 +9,11 @@
 // 3. 安装@babel/polyfill, 向下兼容一些高级语法
 // 4. 使用polyfill 按需加载 ["@babel/preset-env",{"useBuiltIns": "usage", "corejs": 3}]
 
+// babel打包配置使用场景：
+// 1. 如果只是打包业务代码，那么只需要babel，preset里面设置就好了
+// 2. 如果打包类库、ui组件库则需要 配置 @babel/plugin-transform-runtime, 它不会通过全局变量的方式去污染全局环境
+// 3. plugins: [["@babel/plugin-transform-runtime", {"corejs": 3, "helpers": true, "regenerator":true, "useESModules": false"}]]
+
 // import '@babel/polyfill'
 
 import createBtn from './04/index'
