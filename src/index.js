@@ -16,6 +16,9 @@
 
 // import '@babel/polyfill'
 
+import {add} from './05/index'
+console.log(add(1, 43)) 
+
 import createBtn from './04/index'
 
 createBtn()

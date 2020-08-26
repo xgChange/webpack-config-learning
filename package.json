@@ -4,6 +4,9 @@
     "build": "webpack --mode production",
     "serve": "webpack-dev-server"
   },
+  "sideEffects": [
+    "*.css"
+  ],
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/polyfill": "^7.10.4",

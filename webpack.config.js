@@ -13,6 +13,9 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     publicPath: '/', // 以html的路径为准
   },
+  optimization: {
+    usedExports: true
+  },
   module: {
     rules: [
       {
