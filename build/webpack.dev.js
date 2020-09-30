@@ -5,7 +5,7 @@ const {merge} = require('webpack-merge')
 const devConfig = {
   mode: 'development',
   output: {
-    publicPath: '/', // 以html的路径为准
+    publicPath: './', // 以html的路径为准
   },
   optimization: {
     usedExports: true

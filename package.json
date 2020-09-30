@@ -3,7 +3,8 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "serve:dev": "webpack-dev-server --config ./build/webpack.dev.js",
-    "serve:prod": "webpack --config ./build/webpack.prod.js"
+    "serve:prod": "webpack --config ./build/webpack.prod.js",
+    "dev-build": "webpack --config ./build/webpack.dev.js"
   },
   "sideEffects": [
     "*.css"
@@ -25,6 +26,7 @@
   },
   "dependencies": {
     "core-js": "3",
+    "lodash": "^4.17.20",
     "npx": "^10.2.2"
   }
 }

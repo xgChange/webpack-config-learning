@@ -5,11 +5,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   entry: {
     main: './src/index.js',
-    print: './src/03/print.js',
+    // print: './src/03/print.js',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
   },
   module: {
     rules: [
@@ -28,6 +28,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '管理输出',
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({verbose: true}),
   ],
+  optimization: {
+    splitChunks: {  // 代码分割
+      chunks: 'all'
+    }
+  }
 }
