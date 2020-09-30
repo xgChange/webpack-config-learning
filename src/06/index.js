@@ -15,7 +15,7 @@
                   chunks: 'all'
                 }
               }
-     2. 异步加载库，自动代码分割
+     2. 异步加载库，自动代码分割。在要进行异步加载的模块中加注释，webpackChunkName:'lodash'
  */
 
 //  同步：
@@ -25,9 +25,9 @@
 
 // 异步：
 function getComponent () {
-  return import('lodash').then(({default: _}) => {
+  return import(/*webpackChunkName:"loadsh.chunk"*/'lodash').then(({default: _}) => {
     const div = document.createElement('div')
-    div.innerHTML = _.join(['a', 'b', 'c', 'd'], '$$')
+    div.innerHTML = _.join(['a', 'b', 'c', 'd'], ' $$ ')
     return div
   })
 }
