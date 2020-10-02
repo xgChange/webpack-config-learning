@@ -28,11 +28,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '管理输出',
     }),
-    new CleanWebpackPlugin({verbose: true}),
+    new CleanWebpackPlugin({ verbose: true }),
   ],
   optimization: {
-    splitChunks: {  // 代码分割
-      chunks: 'all'
-    }
-  }
+    splitChunks: {
+      // 代码分割
+      chunks: 'all', // all是对同步和异步代码都分割，async是异步代码
+      cacheGroups: {
+        // 如果是同步代码，会走到这里，详情见文档
+        vendors: false,
+        default: false,
+      },
+    },
+  },
 }

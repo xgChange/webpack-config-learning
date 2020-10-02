@@ -23,15 +23,27 @@
 
 // console.log(_.join([2, 5, 7, 54], '$$'))
 
-// 异步：
-function getComponent () {
-  return import(/*webpackChunkName:"loadsh.chunk"*/'lodash').then(({default: _}) => {
+/**
+ * 异步：代码分割的一些配置
+  * optimization: {
+      splitChunks: {
+        // 代码分割
+        chunks: 'all',
+        cacheGroups: {
+          vendors: false,
+          default: false,
+        },
+      },
+    },
+ */
+function getComponent() {
+  return import(/*webpackChunkName:"loadsh.chunk"*/ 'lodash').then(({ default: _ }) => {
     const div = document.createElement('div')
     div.innerHTML = _.join(['a', 'b', 'c', 'd'], ' $$ ')
     return div
   })
 }
 
-getComponent().then(res => {
+getComponent().then((res) => {
   document.body.appendChild(res)
 })
