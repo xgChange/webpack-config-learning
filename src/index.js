@@ -17,7 +17,7 @@
 // import '@babel/polyfill'
 
 // import {add} from './05/index'
-// console.log(add(1, 43)) 
+// console.log(add(1, 43))
 
 // import createBtn from './04/index'
 
@@ -28,9 +28,11 @@
 //   console.log(res)
 // })
 
-
 // 测试splitting
-import './06/index'
+// import './06/index'
+
+// 测试懒加载
+import './07/index'
 
 // 监听热更新变化 （如果js变化了，就要写这一部分的逻辑代码）
 // 如果css变化了，本来也要写的，但是是由于css-loader里面已经做了处理
