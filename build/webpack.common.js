@@ -9,14 +9,11 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js', // 非入口文件的名称
     path: path.join(__dirname, '../dist'),
   },
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/, // 语法解析的时候忽视node_modules里面的代码
