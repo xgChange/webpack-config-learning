@@ -32,7 +32,10 @@
 // import './06/index'
 
 // 测试懒加载
-import './07/index'
+// import './07/index'
+
+// 测试require和import
+import './08-require-import'
 
 // 监听热更新变化 （如果js变化了，就要写这一部分的逻辑代码）
 // 如果css变化了，本来也要写的，但是是由于css-loader里面已经做了处理

@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const MyPlugin = require('../plugins/my-plugin')
 
 module.exports = {
   entry: {
@@ -10,6 +11,9 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.join(__dirname, '../dist'),
+  },
+  resolveLoader: {
+    modules: ['node_modules', path.resolve(__dirname, '../loaders')],
   },
   module: {
     rules: [
@@ -22,6 +26,18 @@ module.exports = {
         exclude: /node_modules/, // 语法解析的时候忽视node_modules里面的代码
         loader: 'babel-loader',
       },
+      {
+        test: /\.txt$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'my-loader',
+          options: {
+            params: {
+              dd: 22,
+            },
+          },
+        },
+      },
     ],
   },
   plugins: [
@@ -29,6 +45,7 @@ module.exports = {
       title: '管理输出',
     }),
     new CleanWebpackPlugin({ verbose: true }),
+    new MyPlugin(),
   ],
   optimization: {
     splitChunks: {
