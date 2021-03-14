@@ -7,6 +7,14 @@ const devConfig = {
   output: {
     publicPath: '/', // 以html的路径为准
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
   optimization: {
     usedExports: true,
   },

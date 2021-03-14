@@ -27,6 +27,7 @@
   "dependencies": {
     "core-js": "3",
     "lodash": "^4.17.20",
+    "mini-css-extract-plugin": "^0.12.0",
     "npx": "^10.2.2"
   }
 }
