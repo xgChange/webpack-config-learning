@@ -6,6 +6,6 @@ setTimeout(() => {
   console.log('内部', a)
 }, 500)
 
-// export { a }
+export { a }
 
-module.exports.a = a
+// module.exports.a = a

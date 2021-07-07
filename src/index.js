@@ -33,9 +33,10 @@
 
 // 测试懒加载
 // import './07/index'
-
 // 测试require和import
 import './08-require-import'
+// console.log('ss', ss)
+// ss()
 // 测试css的代码分割
 // import './08/style.css'
 

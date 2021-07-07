@@ -1,7 +1,12 @@
-console.log('before')
-// const { a } = require('./test')
-import { a } from './test'
-setTimeout(() => {
-  console.log('实质', a)
-}, 500)
-console.log('after')
+import logo1 from '../../assets/logo1.png'
+
+// 
+
+ const ss = () => {
+  // const logo1 = require('../../assets/logo1.png')
+  const img = document.querySelector('#my-img')
+  console.log(img, logo1)
+  img.src = logo1
+}
+
+ss()

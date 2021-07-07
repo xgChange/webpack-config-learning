@@ -35,11 +35,24 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              outputPath: './assets1',
+            }
+          }
+        ]
+      }
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: '管理输出',
+      template: 'public/index.html'
     }),
     new CleanWebpackPlugin({ verbose: true }),
     new MyPlugin(),
